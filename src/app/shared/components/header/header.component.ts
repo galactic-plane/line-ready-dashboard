@@ -12,6 +12,8 @@ import { UserPanelModule } from '../user-panel/user-panel.component';
 import { DxButtonModule } from 'devextreme-angular/ui/button';
 import { DxToolbarModule } from 'devextreme-angular/ui/toolbar';
 
+import { CommonService } from '../../services/common.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: 'header.component.html',
@@ -43,11 +45,14 @@ export class HeaderComponent {
     },
   ];
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, commonService: CommonService) {
     this.apiButtonOptions = {
       icon: 'columnchooser',
       onClick: () => {
-        window.location.href = 'profile';
+        window.location.href = commonService.routePath(
+          window.location.href,
+          'profile'
+        );
       },
     };
   }

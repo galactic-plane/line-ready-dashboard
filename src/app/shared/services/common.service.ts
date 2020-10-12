@@ -15,4 +15,13 @@ export class CommonService {
       .replace(/(<([^>]+)>)/gi, '')
       .replace(/&nbsp;/g, '');
   };
+
+  routePath = (href: string, newPath: string) => {
+    return (
+      href
+        .replace(/home/g, '')
+        .replace(/profile/g, '')
+        .replace(/cities/g, '') + newPath
+    );
+  };
 }
