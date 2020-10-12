@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FishData } from '../../models/fish';
+import { FishModel } from '../../models/fish';
 import { FishService } from '../../services/fishservice.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { FishService } from '../../services/fishservice.service';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent {
-  dataSource: FishData[];
+  dataSource: FishModel[];
   colCountByScreen: object;
 
   constructor(service: FishService) {

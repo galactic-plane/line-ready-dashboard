@@ -7,7 +7,7 @@ export interface City {
   offset: number;
   previous: CityQuery;
   size: number;
-  value: CityData[];
+  value: CityModel[];
   href: string;
   method: string;
   rel: string[];
@@ -38,7 +38,7 @@ export interface Option {
   value: string;
 }
 
-export interface CityData {
+export interface CityModel {
   id: number;
   name: string;
   state: string;

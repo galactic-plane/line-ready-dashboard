@@ -4,7 +4,7 @@ export interface SpeciesIllustrationPhoto {
   title: string;
 }
 
-export interface FishData {
+export interface FishModel {
   id: number;
   fisheryManagement: string;
   habitat: string;
