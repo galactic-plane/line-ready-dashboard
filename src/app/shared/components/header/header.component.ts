@@ -47,7 +47,7 @@ export class HeaderComponent {
     this.apiButtonOptions = {
       icon: 'columnchooser',
       onClick: () => {
-        window.location.href = '/profile';
+        window.location.href = 'profile';
       },
     };
   }
