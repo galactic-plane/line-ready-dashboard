@@ -3,7 +3,34 @@
     <img src="assets/img/line-ready-logo.png" width="100%" />
   </div>
 </div>
-<h2 class="content-block">API Information</h2>
 <div class="content-block">
-  <div class="dx-card responsive-paddings"></div>
+  <div class="dx-card responsive-paddings">
+    <dx-pie-chart
+      id="pie"
+      type="doughnut"
+      title="Fishing Availability"
+      palette="Pastel"
+      paletteExtensionMode="Blend"
+      [dataSource]="fishByAvailabilityDataSource"
+    >
+      <dxo-export [enabled]="true"></dxo-export>
+      <dxo-legend
+        horizontalAlignment="center"
+        verticalAlignment="bottom"
+      ></dxo-legend>
+      <dxi-series argumentField="availability" valueField="val">
+        <dxo-small-values-grouping
+          mode="topN"
+          [topCount]="3"
+        ></dxo-small-values-grouping>
+        <dxo-label
+          [visible]="true"
+          format="fixedPoint"
+          [customizeText]="customizeLabel"
+        >
+          <dxo-connector [visible]="true" [width]="1"></dxo-connector>
+        </dxo-label>
+      </dxi-series>
+    </dx-pie-chart>
+  </div>
 </div>

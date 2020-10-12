@@ -1,5 +1,33 @@
 import { FishModel } from '../../models/fish';
 
+export class FishByAvailabilityModel {
+  availability: string;
+  val: number;
+}
+
+export const fishByAvailability: FishByAvailabilityModel[] = [
+  {
+    availability: 'Year-Round',
+    val: 10,
+  },
+  {
+    availability: 'Spring',
+    val: 40,
+  },
+  {
+    availability: 'Summer',
+    val: 30,
+  },
+  {
+    availability: 'Fall',
+    val: 10,
+  },
+  {
+    availability: 'Winter',
+    val: 10,
+  },
+];
+
 export const StaticFishData: FishModel[] = [
   {
     id: 113,

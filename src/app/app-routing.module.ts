@@ -5,10 +5,18 @@ import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { CitiesComponent } from './pages/cities/cities.component';
-import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
 import { BrowserModule } from '@angular/platform-browser';
-import { DxTemplateModule, DxGalleryModule } from 'devextreme-angular';
-import { DxVectorMapModule, DxButtonModule } from 'devextreme-angular';
+import {
+  DxDataGridModule,
+  DxFormModule,
+  DxTemplateModule,
+  DxGalleryModule,
+  DxVectorMapModule,
+  DxButtonModule,
+  DxPieChartModule,
+  DxHtmlEditorModule,
+  DxTileViewModule,
+} from 'devextreme-angular';
 
 const routes: Routes = [
   {
@@ -48,6 +56,9 @@ const routes: Routes = [
     DxGalleryModule,
     DxVectorMapModule,
     DxButtonModule,
+    DxPieChartModule,
+    DxHtmlEditorModule,
+    DxTileViewModule,
   ],
   providers: [AuthGuardService],
   exports: [RouterModule],

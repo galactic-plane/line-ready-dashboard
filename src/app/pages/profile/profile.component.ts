@@ -10,10 +10,12 @@ import { FishService } from '../../services/fishservice.service';
 })
 export class ProfileComponent {
   dataSource: FishModel[];
+  rawData: string;
   colCountByScreen: object;
 
   constructor(service: FishService) {
     this.dataSource = service.getFishData();
+    this.rawData = JSON.stringify(this.dataSource);
     this.colCountByScreen = {
       xs: 1,
       sm: 2,

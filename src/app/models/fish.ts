@@ -64,4 +64,6 @@ export interface FishModel {
   href: string;
   method?: any;
   rel?: any;
+  widthRatio?: number;
+  heightRatio?: number;
 }
