@@ -1,33 +1,7 @@
 <ng-container *ngIf="isAutorized(); else notAuthorized">
   <app-side-nav-outer-toolbar title="{{ appInfo.title }}">
     <router-outlet></router-outlet>
-    <div class="content-block">
-      <h4>Connect</h4>
-      <div class="dx-card responsive-paddings">
-        <ul>
-          <li>
-            <a href="https://github.com/Iturea" target="_blank">Github</a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/daniel-penrod-sr/"
-              target="_blank"
-              >Linked In</a
-            >
-          </li>
-          <li>
-            <a href="https://penrodtech.wixsite.com/blog" target="_blank"
-              >Blog</a
-            >
-          </li>
-          <li>
-            <a href="https://www.facebook.com/penrodtech" target="_blank"
-              >Facebook</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
+
     <app-footer>
       Copyright © 2011-{{ appInfo.currentYear }} Line Ready
       <br />
