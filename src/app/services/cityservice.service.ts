@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { StaticCityData } from '../shared/data/citydata';
-import { Marker, Attributes } from '../models/marker';
+import { MarkerModel, Attributes } from '../models/marker';
 
-const markers: Marker[] = [];
+const markers: MarkerModel[] = [];
 
 @Injectable({
   providedIn: 'root',
 })
 export class CityService {
-  marker: Marker;
+  marker: MarkerModel;
 
-  getCityData = (): Marker[] => {
+  getCityData = (): MarkerModel[] => {
     for (const element of StaticCityData) {
-      this.marker = new Marker();
+      this.marker = new MarkerModel();
       this.marker.coordinates = [element.coord.lon, element.coord.lat];
       this.marker.attributes = new Attributes();
       this.marker.attributes.name = element.name + ', ' + element.state;

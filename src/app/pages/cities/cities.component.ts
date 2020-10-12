@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Marker } from '../../models/marker';
+import { MarkerModel } from '../../models/marker';
 import { CityService } from '../../services/cityservice.service';
 import { DxVectorMapComponent } from 'devextreme-angular';
 
@@ -14,7 +14,7 @@ export class CitiesComponent {
   @ViewChild(DxVectorMapComponent, { static: false })
   vectorMap: DxVectorMapComponent;
   usaMap: any = mapsData.usa;
-  markers: Marker[];
+  markers: MarkerModel[];
 
   customizeTooltip = (arg) => {
     if (arg.layer.type === 'marker') {

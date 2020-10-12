@@ -2,7 +2,7 @@ export class Attributes {
   name: string;
 }
 
-export class Marker {
+export class MarkerModel {
   coordinates: number[];
   attributes: Attributes;
 }
