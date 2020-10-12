@@ -1,0 +1,24 @@
+<h2 class="content-block">US Cities</h2>
+
+<div class="content-block">
+  <div class="dx-card responsive-paddings">
+    <div>
+      Data:
+      <a
+        href="https://line-ready-api.azurewebsites.net/cities?Offset=1&Limit=100&OrderBy=name&Search=state%20eq%20NC"
+        target="_blank"
+        >https://line-ready-api.azurewebsites.net/cities?Offset=1&Limit=100&OrderBy=name&Search=state%20eq%20NC</a
+      >
+    </div>
+    <br /><br />
+    <dx-vector-map id="vector-map" [bounds]="[-118, 52, -80, 20]">
+      <dxo-size [height]="650"> </dxo-size>
+      <dxo-tooltip
+        [enabled]="true"
+        [customizeTooltip]="customizeTooltip"
+      ></dxo-tooltip>
+      <dxi-layer [dataSource]="usaMap" [hoverEnabled]="false"></dxi-layer>
+      <dxi-layer [dataSource]="markers"></dxi-layer>
+    </dx-vector-map>
+  </div>
+</div>

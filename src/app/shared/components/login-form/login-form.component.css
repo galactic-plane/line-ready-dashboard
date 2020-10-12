@@ -1,0 +1,12 @@
+.login-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-header .title {
+  color: #03A9F4;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+}
+/*# sourceMappingURL=login-form.component.css.map */

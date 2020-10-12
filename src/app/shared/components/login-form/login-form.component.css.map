@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAC;EACZ,UAAU,EAAE,MAAM;EAClB,aAAa,EAAE,IAAI;CAQpB;;AAVD,AAIE,aAJW,CAIX,MAAM,CAAC;EACL,KAAK,ECJK,OAAO;EDKjB,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,CAAC;CACV",
+    "sources": [
+        "login-form.component.scss",
+        "../../../../themes/generated/variables.base.scss"
+    ],
+    "names": [],
+    "file": "login-form.component.css"
+}

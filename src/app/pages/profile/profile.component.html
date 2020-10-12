@@ -1,0 +1,34 @@
+<h2 class="content-block">Fish Profiles</h2>
+
+<div class="content-block">
+  <div class="dx-card responsive-paddings">
+    <div>
+      Data:
+      <a href="https://line-ready-api.azurewebsites.net/fish" target="_blank"
+        >https://line-ready-api.azurewebsites.net/fish</a
+      >
+    </div>
+    <br /><br />
+    <dx-gallery
+      [dataSource]="dataSource"
+      [height]="650"
+      width="100%"
+      [loop]="true"
+      [showNavButtons]="true"
+      [showIndicator]="true"
+    >
+      <div *dxTemplate="let galleryItem of 'item'">
+        <div>
+          <img src="{{ galleryItem.speciesIllustrationPhoto.src }}" />
+        </div>
+        <div>
+          <h2>{{ galleryItem.speciesName }}</h2>
+          <blockquote>
+            <p>{{ galleryItem.habitat }}</p>
+            <p>{{ galleryItem.quote }}</p>
+          </blockquote>
+        </div>
+      </div>
+    </dx-gallery>
+  </div>
+</div>

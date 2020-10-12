@@ -1,0 +1,23 @@
+@import "sass/variables";
+
+blockquote {
+  background: $contentOffsetBgColor;
+  color: $contentOffsetColor;
+  margin: auto;
+  width: 50%;
+  border-left: 10px solid $accentColor;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  p {
+    display: block;
+  }
+}
+
+.dx-gallery-item {
+  white-space: pre-wrap;
+}
+
+.offsetBk {
+  background: $contentOffsetBgColor;
+  color: $contentOffsetColor;
+}

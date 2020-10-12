@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,KAAK;EACd,KAAK,ECJW,oBAAmB;EDKnC,UAAU,EAAE,GAAG,CAAC,KAAK,CAAC,kBAAkB;EACxC,WAAW,EAAE,IAAI;EACjB,cAAc,EAAE,IAAI;CACrB",
+    "sources": [
+        "footer.component.scss",
+        "../../../../themes/generated/variables.base.scss"
+    ],
+    "names": [],
+    "file": "footer.component.css"
+}
