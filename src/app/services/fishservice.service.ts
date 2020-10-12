@@ -2014,7 +2014,6 @@ export class FishService {
       }
     }
     return fishData;
-    // tslint:disable-next-line: semicolon
   };
 
   constructor(service: CommonService) {

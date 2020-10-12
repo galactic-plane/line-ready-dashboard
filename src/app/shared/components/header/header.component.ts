@@ -1,4 +1,10 @@
-import { Component, NgModule, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  NgModule,
+  Input,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AuthService } from '../../services';
@@ -9,9 +15,8 @@ import { DxToolbarModule } from 'devextreme-angular/ui/toolbar';
 @Component({
   selector: 'app-header',
   templateUrl: 'header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-
 export class HeaderComponent {
   @Output()
   menuToggle = new EventEmitter<boolean>();
@@ -22,32 +27,39 @@ export class HeaderComponent {
   @Input()
   title: string;
 
-  userMenuItems = [{
-    text: 'Profile',
-    icon: 'user'
-  }, {
-    text: 'Logout',
-    icon: 'runner',
-    onClick: () => {
-      this.authService.logOut();
-    }
-  }];
+  apiButtonOptions: any;
 
-  constructor(private authService: AuthService) { }
+  userMenuItems = [
+    {
+      text: 'Profile',
+      icon: 'user',
+    },
+    {
+      text: 'Logout',
+      icon: 'runner',
+      onClick: () => {
+        this.authService.logOut();
+      },
+    },
+  ];
+
+  constructor(private authService: AuthService) {
+    this.apiButtonOptions = {
+      icon: 'columnchooser',
+      onClick: () => {
+        window.location.href = '/profile';
+      },
+    };
+  }
 
   toggleMenu = () => {
     this.menuToggle.emit();
-  }
+  };
 }
 
 @NgModule({
-  imports: [
-    CommonModule,
-    DxButtonModule,
-    UserPanelModule,
-    DxToolbarModule
-  ],
-  declarations: [ HeaderComponent ],
-  exports: [ HeaderComponent ]
+  imports: [CommonModule, DxButtonModule, UserPanelModule, DxToolbarModule],
+  declarations: [HeaderComponent],
+  exports: [HeaderComponent],
 })
-export class HeaderModule { }
+export class HeaderModule {}

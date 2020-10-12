@@ -35,7 +35,6 @@ export interface FishData {
   environmentalEffects?: any;
   farmingMethods?: any;
   fatTotal: string;
-  // tslint:disable-next-line: variable-name
   feeds_?: any;
   feeds?: any;
   fiberTotalDietary?: any;
@@ -43,7 +42,6 @@ export interface FishData {
   harvest: string;
   harvestType?: any;
   healthBenefits: string;
-  // tslint:disable-next-line: variable-name
   human_Health_?: any;
   humanHealth?: any;
   physicalDescription: string;

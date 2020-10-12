@@ -22,20 +22,17 @@ export class CitiesComponent {
         text: arg.attribute('name'),
       };
     }
-    // tslint:disable-next-line: semicolon
   };
 
   markerClick = (e) => {
     if (e.target && e.target.layer.type === 'marker') {
       e.component.center(e.target.coordinates()).zoomFactor(10);
     }
-    // tslint:disable-next-line: semicolon
   };
 
   resetClick = () => {
     this.vectorMap.instance.center(null);
     this.vectorMap.instance.zoomFactor(null);
-    // tslint:disable-next-line: semicolon
   };
 
   constructor(service: CityService) {

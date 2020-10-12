@@ -1325,7 +1325,6 @@ export class CityService {
     }
 
     return markers;
-    // tslint:disable-next-line: semicolon
   };
 
   constructor() {}

@@ -14,6 +14,5 @@ export class CommonService {
       .toString()
       .replace(/(<([^>]+)>)/gi, '')
       .replace(/&nbsp;/g, '');
-    // tslint:disable-next-line: semicolon
   };
 }
