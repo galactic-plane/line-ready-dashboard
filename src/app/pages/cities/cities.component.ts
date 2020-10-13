@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MarkerModel } from '../../models/marker';
 import { CityService } from '../../services/cityservice.service';
 import { DxVectorMapComponent } from 'devextreme-angular';
+import { CommonService } from '../../shared/services/common.service';
 
 import * as mapsData from 'devextreme/dist/js/vectormap-data/usa.js';
 
@@ -15,6 +16,7 @@ export class CitiesComponent {
   vectorMap: DxVectorMapComponent;
   usaMap: any = mapsData.usa;
   markers: MarkerModel[];
+  rawData: string;
 
   customizeTooltip = (arg) => {
     if (arg.layer.type === 'marker') {
@@ -35,7 +37,10 @@ export class CitiesComponent {
     this.vectorMap.instance.zoomFactor(null);
   };
 
-  constructor(service: CityService) {
+  constructor(service: CityService, commonService: CommonService) {
     this.markers = service.getCityData();
+    this.rawData = commonService.outputObject(
+      commonService.syntaxHighlight(JSON.stringify(this.markers, undefined, 4))
+    );
   }
 }

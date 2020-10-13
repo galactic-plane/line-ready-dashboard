@@ -27,17 +27,32 @@ pre {
   background: #2a2a32;
 }
 .string {
-  color: #059688;
+  color: #28a745;
 }
 .number {
-  color: #ee0077;
+  color: #dc3545;
 }
 .boolean {
-  color: #030d3d;
+  color: #007bff;
 }
 .null {
-  color: magenta;
+  color: #343a40;
 }
 .key {
-  color: #ffd400;
+  color: #ffc107;
+}
+
+#progress-bar-status {
+  display: inline-block;
+}
+.complete .dx-progressbar-range {
+  background-color: green;
+}
+
+.clientContainer {
+  background: url(assets/img/clientblur.png);
+  width: auto;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }

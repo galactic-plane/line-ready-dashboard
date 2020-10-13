@@ -8,6 +8,7 @@ import {
 import { FishModel } from '../../models/fish';
 
 @Component({
+  selector: 'app-home',
   templateUrl: 'home.component.html',
   styleUrls: ['./home.component.scss'],
 })

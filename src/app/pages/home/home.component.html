@@ -32,5 +32,28 @@
         </dxo-label>
       </dxi-series>
     </dx-pie-chart>
+    <br /><br />
+    <dx-data-grid
+      id="gridContainer"
+      height="550"
+      [dataSource]="staticFishDataDataSource"
+      [columns]="[
+        'id',
+        'scientificName',
+        'speciesName',
+        'calories',
+        'cholesterol',
+        'fatTotal',
+        'saturatedFattyAcidsTotal',
+        'sodium'
+      ]"
+      [showBorders]="true"
+    >
+      <dxo-search-panel
+        visible="true"
+        width="240"
+        placeholder="Search..."
+      ></dxo-search-panel>
+    </dx-data-grid>
   </div>
 </div>

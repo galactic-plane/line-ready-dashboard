@@ -18,6 +18,7 @@ import {
   DxHtmlEditorModule,
   DxTileViewModule,
   DxScrollViewModule,
+  DxProgressBarModule,
 } from 'devextreme-angular';
 
 const routes: Routes = [
@@ -67,9 +68,15 @@ const routes: Routes = [
     DxHtmlEditorModule,
     DxTileViewModule,
     DxScrollViewModule,
+    DxProgressBarModule,
   ],
   providers: [AuthGuardService],
   exports: [RouterModule],
-  declarations: [HomeComponent, ProfileComponent, CitiesComponent],
+  declarations: [
+    HomeComponent,
+    ClientComponent,
+    ProfileComponent,
+    CitiesComponent,
+  ],
 })
 export class AppRoutingModule {}
