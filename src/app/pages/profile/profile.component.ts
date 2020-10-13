@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FishModel } from '../../models/fish';
 import { FishService } from '../../services/fishservice.service';
+import { CommonService } from '../../shared/services/common.service';
 
 @Component({
   selector: 'app-profile',
@@ -13,9 +14,13 @@ export class ProfileComponent {
   rawData: string;
   colCountByScreen: object;
 
-  constructor(service: FishService) {
+  constructor(service: FishService, commonService: CommonService) {
     this.dataSource = service.getFishData();
-    this.rawData = JSON.stringify(this.dataSource);
+    this.rawData = commonService.outputObject(
+      commonService.syntaxHighlight(
+        JSON.stringify(this.dataSource, undefined, 4)
+      )
+    );
     this.colCountByScreen = {
       xs: 1,
       sm: 2,

@@ -5,6 +5,7 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { AuthService } from '../../services';
@@ -13,6 +14,7 @@ import { DxButtonModule } from 'devextreme-angular/ui/button';
 import { DxToolbarModule } from 'devextreme-angular/ui/toolbar';
 
 import { CommonService } from '../../services/common.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -45,14 +47,15 @@ export class HeaderComponent {
     },
   ];
 
-  constructor(private authService: AuthService, commonService: CommonService) {
+  constructor(
+    private authService: AuthService,
+    commonService: CommonService,
+    private router: Router
+  ) {
     this.apiButtonOptions = {
       icon: 'columnchooser',
       onClick: () => {
-        window.location.href = commonService.routePath(
-          window.location.href,
-          'profile'
-        );
+        router.navigate(['/', 'profile']);
       },
     };
   }

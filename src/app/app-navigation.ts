@@ -5,11 +5,16 @@ export const navigation = [
     icon: 'chart',
   },
   {
+    text: 'Client',
+    path: '/client',
+    icon: 'user',
+  },
+  {
     text: 'API Data',
     icon: 'columnchooser',
     items: [
       {
-        text: 'Fish Profiles',
+        text: 'Profiles',
         icon: 'card',
         path: '/profile',
       },

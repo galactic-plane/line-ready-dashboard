@@ -21,3 +21,23 @@ blockquote {
   background: $contentOffsetBgColor;
   color: $contentOffsetColor;
 }
+
+pre {
+  color: #f4f4f4;
+  background: #2a2a32;
+}
+.string {
+  color: #059688;
+}
+.number {
+  color: #ee0077;
+}
+.boolean {
+  color: #030d3d;
+}
+.null {
+  color: magenta;
+}
+.key {
+  color: #ffd400;
+}

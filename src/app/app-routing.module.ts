@@ -16,6 +16,7 @@ import {
   DxPieChartModule,
   DxHtmlEditorModule,
   DxTileViewModule,
+  DxScrollViewModule,
 } from 'devextreme-angular';
 
 const routes: Routes = [
@@ -41,7 +42,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home',
+    component: HomeComponent,
     canActivate: [AuthGuardService],
   },
 ];
@@ -59,6 +60,7 @@ const routes: Routes = [
     DxPieChartModule,
     DxHtmlEditorModule,
     DxTileViewModule,
+    DxScrollViewModule,
   ],
   providers: [AuthGuardService],
   exports: [RouterModule],
