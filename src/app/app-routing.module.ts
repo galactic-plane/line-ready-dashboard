@@ -5,6 +5,7 @@ import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { CitiesComponent } from './pages/cities/cities.component';
+import { ClientComponent } from './pages/client/client.component';
 import { BrowserModule } from '@angular/platform-browser';
 import {
   DxDataGridModule,
@@ -33,6 +34,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'client',
+    component: ClientComponent,
     canActivate: [AuthGuardService],
   },
   {
