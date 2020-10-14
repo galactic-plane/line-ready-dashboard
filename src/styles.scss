@@ -1,7 +1,7 @@
 @import "sass/variables";
 
 blockquote {
-  color: $contentColor;
+  color: $contentMainColor;
   margin: auto;
   width: 50%;
   border-left: 10px solid $accentColor;
@@ -23,23 +23,23 @@ blockquote {
 }
 
 pre {
-  color: #f4f4f4;
-  background: #2a2a32;
+  color: $contentOffsetBgColor;
+  background: $contentMainBgColor;
 }
 .string {
-  color: #28a745;
+  color: $codeString;
 }
 .number {
-  color: #dc3545;
+  color: $codeNumber;
 }
 .boolean {
-  color: #007bff;
+  color: $codeBoolean;
 }
 .null {
-  color: #343a40;
+  color: $codeNull;
 }
 .key {
-  color: #ffc107;
+  color: $codeKey;
 }
 
 #progress-bar-status {
@@ -47,6 +47,12 @@ pre {
 }
 .complete .dx-progressbar-range {
   background-color: green;
+}
+.progress-info {
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  background: #000000;
 }
 
 .clientContainer {

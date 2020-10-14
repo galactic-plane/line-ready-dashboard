@@ -1,4 +1,19 @@
-$contentColor: #ffffff;
+/***************************
+  Offset colors
+/***************************/
 $contentOffsetBgColor: #f2f2f2;
-$accentColor: #ccc;
-$contentOffsetColor: #333333;
+$contentOffsetColor: #2a2a32;
+$accentColor: #cccccc;
+/***************************
+  Main colors
+/***************************/
+$contentMainBgColor: #2a2a32;
+$contentMainColor: #ffffff;
+/***************************
+  Highlight colors
+/***************************/
+$codeKey: #569cd6;
+$codeString: #e3e3e3;
+$codeNumber: #ce916c;
+$codeBoolean: #0b721d;
+$codeNull: #cccccc;

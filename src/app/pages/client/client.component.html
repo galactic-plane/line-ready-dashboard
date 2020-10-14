@@ -1,5 +1,8 @@
 <div class="content-block">
   <div class="dx-card responsive-paddings clientContainer">
+    <div class="progress-info">
+      {{ statusMsg }} <span [innerHTML]="webLink"></span> {{ seconds | time }}
+    </div>
     <iframe
       src="https://line-ready.azurewebsites.net/"
       width="100%"
@@ -7,7 +10,6 @@
       style="border: 0; width: 100%"
       (load)="loadDone()"
     ></iframe>
-
     <dx-progress-bar
       #progressBar
       id="progress-bar-status"

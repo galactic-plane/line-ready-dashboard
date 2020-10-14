@@ -1,11 +1,4 @@
-import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
-
-@Pipe({ name: 'time' })
-export class TimePipe implements PipeTransform {
-  transform(value: number): string {
-    return '00:00:' + ('0' + value).slice(-2);
-  }
-}
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-client',
@@ -18,9 +11,13 @@ export class ClientComponent implements OnInit {
   maxValue = 60;
   intervalId: any;
   frameHeight: number;
+  statusMsg: string;
+  webLink: string;
 
   constructor() {
     this.frameHeight = window.innerHeight - 300;
+    this.statusMsg = 'Initializing';
+    this.webLink = '';
   }
 
   ngOnInit(): void {
@@ -37,6 +34,28 @@ export class ClientComponent implements OnInit {
 
   timer = () => {
     this.seconds--;
+    switch (true) {
+      case this.seconds > 50:
+        this.statusMsg = 'Provisioning Server';
+        break;
+      case this.seconds > 40:
+        this.statusMsg = 'Installing Application';
+        break;
+      case this.seconds > 30:
+        this.statusMsg = 'Restoring Packages';
+        break;
+      case this.seconds > 20:
+        this.statusMsg = 'Building Application';
+        break;
+      case this.seconds > 10:
+        this.statusMsg = 'Booting Application';
+        break;
+      default:
+        this.statusMsg = '';
+        this.webLink =
+          '<a href="https://line-ready.azurewebsites.net/" target="_blank">https://line-ready.azurewebsites.net/</a>';
+        break;
+    }
     if (this.seconds === 0) {
       this.inProgress = !this.inProgress;
       clearInterval(this.intervalId);

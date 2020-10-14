@@ -3,7 +3,6 @@ import { MarkerModel } from '../../models/marker';
 import { CityService } from '../../services/cityservice.service';
 import { DxVectorMapComponent } from 'devextreme-angular';
 import { CommonService } from '../../shared/services/common.service';
-
 import * as mapsData from 'devextreme/dist/js/vectormap-data/usa.js';
 
 @Component({

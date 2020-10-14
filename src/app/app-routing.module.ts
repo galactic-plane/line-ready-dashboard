@@ -20,6 +20,7 @@ import {
   DxScrollViewModule,
   DxProgressBarModule,
 } from 'devextreme-angular';
+import { TimePipe } from './shared/pipes/time.pipe';
 
 const routes: Routes = [
   {
@@ -71,12 +72,13 @@ const routes: Routes = [
     DxProgressBarModule,
   ],
   providers: [AuthGuardService],
-  exports: [RouterModule],
+  exports: [RouterModule, TimePipe],
   declarations: [
     HomeComponent,
     ClientComponent,
     ProfileComponent,
     CitiesComponent,
+    TimePipe,
   ],
 })
 export class AppRoutingModule {}
