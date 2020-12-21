@@ -1,6 +1,6 @@
 # Line Ready Dashboard
 
-### [https://iturea.github.io/line-ready-dashboard/](https://iturea.github.io/line-ready-dashboard/)
+### [https://galactic-plane.github.io/line-ready-dashboard/](https://galactic-plane.github.io/line-ready-dashboard/)
 
 Click the link to test it out!
 
