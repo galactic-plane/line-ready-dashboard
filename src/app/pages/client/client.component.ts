@@ -53,7 +53,7 @@ export class ClientComponent implements OnInit {
       default:
         this.statusMsg = '';
         this.webLink =
-          '<a href="https://line-ready.azurewebsites.net/" target="_blank">https://line-ready.azurewebsites.net/</a>';
+          '<a href="https://line-ready-nodejs.azurewebsites.net/" target="_blank">https://line-ready-nodejs.azurewebsites.net/</a>';
         break;
     }
     if (this.seconds === 0) {
